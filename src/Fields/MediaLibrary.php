@@ -75,10 +75,6 @@ class MediaLibrary extends Image
 
     protected function resolveAfterDestroy(mixed $data): mixed
     {
-        $data
-            ->getMedia($this->column)
-            ->each(fn(Media $media) => $media->delete());
-
         return $data;
     }
 
